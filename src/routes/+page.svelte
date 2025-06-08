@@ -198,7 +198,7 @@
     }
 
     main > content {
-      height: unset;
+      height: calc(100vh - 5rem);
     }
   }
 </style>
