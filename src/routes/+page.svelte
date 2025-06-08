@@ -280,7 +280,7 @@
     <container>
       <div in:fly={{ y: "1rem", opacity: 1 }}>
         <h1>friends</h1>
-        <p>i have some pretty cool friends ^w^</p>
+        <p>i have some pretty cool friends :3</p>
         <ul>
           <li><a href="https://elizadoesstuff.nekoweb.org">eliza</a></li>
           <li><a href="https://samv.me">shock59</a></li>
