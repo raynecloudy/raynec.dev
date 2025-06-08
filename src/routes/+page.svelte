@@ -8,19 +8,36 @@
   // @ts-ignore
   let main: HTMLElement = $state();
   let loaded = $state(false);
+  let lightsOn = $state(false);
   
   onMount(() => {
     loaded = true;
+    lightsOn = localStorage["lights"] ?? window.matchMedia("prefers-color-scheme: dark").matches;
+    document.body.className = lightsOn ? "" : "dark";
   });
 </script>
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Mukta+Mahee:wght@200;300;400;500;600;700;800&display=swap");
   @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
+  :root {
+    --background: linear-gradient(-15deg, #fbf0ff, #fff0fb);
+    --portrait-background: #fcf8ff;
+    --primary: #ffc5f5;
+    --text: #581ec2;
+  }
+
+  :root:has(:global(body.dark)) {
+    --background: #1b0817;
+    --portrait-background: #11030e;
+    --primary: #58284c;
+    --text: #fdbeff;
+  }
+
   :global(body) {
-    color: #581ec2;
-    background-image: linear-gradient(-15deg, #fbf0ff, #fff0fb);
-    text-shadow: 0.1rem 0.1rem 0 #ffc5f5;
+    color: var(--text);
+    background: var(--background);
+    text-shadow: 0.1rem 0.1rem 0 var(--primary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,12 +50,12 @@
 
   ::selection {
     text-shadow: none;
-    background-color: #ffc5f5;
-    color: #581ec2;
+    background-color: var(--primary);
+    color: var(--text);
   }
 
   :focus-visible {
-    outline: 0.15rem solid #581ec2;
+    outline: 0.15rem solid var(--text);
   }
   
   main {
@@ -46,10 +63,10 @@
     gap: 5rem;
     position: relative;
     align-items: center;
-    outline: 0.15rem solid #ffc5f5;
+    outline: 0.15rem solid var(--primary);
     padding: 3.5rem;
     border-radius: 7rem;
-    box-shadow: 0.3rem 0.3rem 0 #ffc5f5;
+    box-shadow: 0.3rem 0.3rem 0 var(--primary);
   }
 
   #info {
@@ -66,7 +83,7 @@
     width: 17rem;
     height: 20rem;
     border-radius: 4rem;
-    background-color: #ffc5f5;
+    background-color: var(--primary);
     overflow: hidden;
   }
 
@@ -75,7 +92,7 @@
     height: inherit;
     border-radius: inherit;
     background-image: url("/rayne.png");
-    background-color: #fcf8ff;
+    background-color: var(--portrait-background);
     background-size: 25rem;
     position: relative;
     top: 0.3rem;
@@ -87,7 +104,7 @@
     display: flex;
     /* padding-top: 1rem; */
     /* gap: 1.2rem; */
-    /* outline: 0.15rem solid #ffc5f5; */
+    /* outline: 0.15rem solid var(--primary); */
     border-radius: 1rem;
     overflow: hidden;
   }
@@ -108,7 +125,7 @@
   #social-bar a:not(:not(:hover, :focus-visible)),
   .light-up {
     outline: none;
-    background-color: #ffc5f5;
+    background-color: var(--primary);
   }
 
   main > content {
@@ -133,7 +150,7 @@
     color: inherit;
     text-shadow: inherit;
     background-color: transparent;
-    outline: 0.15rem solid #ffc5f5;
+    outline: 0.15rem solid var(--primary);
     border-radius: 1rem;
     cursor: pointer;
   }
@@ -207,6 +224,12 @@
   picture.style.backgroundPosition = `${(event.clientX / 80) - 60}px ${(event.clientY / 80) - 35}px`;
   main.style.left = `${(event.clientX / -40)}px`;
   main.style.top = `${(event.clientY / -40)}px`;
+}} onkeydown={(event) => {
+  if (event.key === "l") {
+    lightsOn = !lightsOn;
+    document.body.className = lightsOn ? "" : "dark";
+    localStorage["lights"] = lightsOn;
+  }
 }}></svelte:body>
 
 {#if loaded}
@@ -217,10 +240,10 @@
     </div>
     <h2>rayne cloudy</h2>
     <div id="social-bar">
-      <a href="https://github.com/raynecloudy" in:fly={{ delay: 200, y: "1rem" }}><img src="/GitHub_Invertocat_Dark.svg" alt="github"></a>
-      <a href="https://bsky.app/profile/raynec.dev" in:fly={{ delay: 400, y: "1rem" }}><img src="/bsky.svg" alt="bluesky"></a>
-      <a href="https://discord.gg/mD6metDHNE" in:fly={{ delay: 600, y: "1rem" }}><img src="/Discord-Symbol-Black.svg" alt="discord"></a>
-      <a href="https://patreon.com/raynecloudy" in:fly={{ delay: 800, y: "1rem" }} class={page.url.hash === "#donators" ? "light-up" : ""}><img src="/PATREON_SYMBOL_1_BLACK_RGB.svg" alt="patreon"></a>
+      <a href="https://github.com/raynecloudy" in:fly={{ delay: 200, y: "1rem" }}><img src="/GitHub_Invertocat_{lightsOn ? "Dark" : "Light"}.svg" alt="github"></a>
+      <a href="https://bsky.app/profile/raynec.dev" in:fly={{ delay: 400, y: "1rem" }}><img src="/bsky-{lightsOn ? "black" : "white"}.svg" alt="bluesky"></a>
+      <a href="https://discord.gg/mD6metDHNE" in:fly={{ delay: 600, y: "1rem" }}><img src="/Discord-Symbol-{lightsOn ? "Black" : "White"}.svg" alt="discord"></a>
+      <a href="https://patreon.com/raynecloudy" in:fly={{ delay: 800, y: "1rem" }} class={page.url.hash === "#donators" ? "light-up" : ""}><img src="/PATREON_SYMBOL_1_{lightsOn ? "BLACK" : "WHITE"}_RGB.svg" alt="patreon"></a>
     </div>
     <select bind:value={page.url.hash} onchange={(event) => location.hash = event.currentTarget.value}>
       <option value="" selected>about</option>
