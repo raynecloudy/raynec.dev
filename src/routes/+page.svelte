@@ -250,6 +250,7 @@
       <option value="" selected>about</option>
       <option value="#donators">donators</option>
       <option value="#friends">friends</option>
+      <option value="#socials">socials</option>
       <option disabled>coming soon....</option>
     </select>
   </div>
@@ -288,6 +289,18 @@
         </ul>
       </div>
     </container>
+    {:else if page.url.hash === "#socials"}
+    <h1>socials</h1>
+    <p>this page sums up my entire current online presence.</p>
+    <ul>
+      <li><a href="https://artfight.net/~raynecloudy">artfight</a></li>
+      <li><a href="https://bsky.app/profile/raynec.dev">bluesky</a></li>
+      <li><a href="https://chess.com/member/raynecloudy">chess.com</a></li>
+      <li><a href="https://discord.gg/mD6metDHNE">discord</a></li>
+      <li><a href="https://github.com/raynecloudy">github</a></li>
+      <li><a href="https://patreon.com/raynecloudy">patreon</a></li>
+      <li><a href="https://pronouns.cc/@raynec">pronouns.cc</a></li>
+    </ul>
     {:else}
     <container>
       <div in:fly={{ y: "1rem", opacity: 1 }}>
