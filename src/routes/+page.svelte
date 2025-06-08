@@ -12,7 +12,8 @@
   
   onMount(() => {
     loaded = true;
-    lightsOn = localStorage["lights"] ?? window.matchMedia("prefers-color-scheme: dark").matches;
+    // @ts-ignore
+    lightsOn = `${(localStorage.getItem("lights") ?? window.matchMedia("prefers-color-scheme: dark").matches)}` === "true";
     document.body.className = lightsOn ? "" : "dark";
   });
 </script>
@@ -228,7 +229,7 @@
   if (event.key === "l") {
     lightsOn = !lightsOn;
     document.body.className = lightsOn ? "" : "dark";
-    localStorage["lights"] = lightsOn;
+    localStorage.setItem("lights", `${lightsOn}`);
   }
 }}></svelte:body>
 
