@@ -233,6 +233,32 @@
   }
 }}></svelte:body>
 
+<svelte:head>
+  <title>
+    {(() => {
+      switch (page.url.hash) {
+        case "":
+          return "rayne cloudy!";
+
+        case "#donators":
+          return "patreons! <3";
+
+        case "#friends":
+          return "my buddies!";
+
+        case "#socials":
+          return "my online presence";
+
+        case "#puns":
+          return "rayne and eliza's epic pun battle!";
+      
+        default:
+          return "not found";
+      }
+    })()}
+  </title>
+</svelte:head>
+
 {#if loaded}
 <main in:fade bind:this={main}>
   <div id="info">
