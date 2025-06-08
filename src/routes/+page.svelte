@@ -249,6 +249,7 @@
     <select bind:value={page.url.hash} onchange={(event) => location.hash = event.currentTarget.value}>
       <option value="" selected>about</option>
       <option value="#donators">donators</option>
+      <option value="#friends">friends</option>
       <option disabled>coming soon....</option>
     </select>
   </div>
@@ -271,6 +272,19 @@
         <ul id="donator-list">
           <li class="rainbow-donator"><a href="https://dumorando.com">dumorando</a></li>
           <li><a href="https://samv.me">shock59</a></li>
+        </ul>
+      </div>
+    </container>
+    {:else if page.url.hash === "#friends"}
+    <container>
+      <div in:fly={{ y: "1rem", opacity: 1 }}>
+        <h1>friends</h1>
+        <p>i have some pretty cool friends ^w^</p>
+        <ul>
+          <li><a href="https://elizadoesstuff.nekoweb.org">eliza</a></li>
+          <li><a href="https://samv.me">shock59</a></li>
+          <li><a href="https://steve0greatness.nekoweb.org">steve0greatness</a></li>
+          <li><a href="https://tally.gay">tally</a></li>
         </ul>
       </div>
     </container>
