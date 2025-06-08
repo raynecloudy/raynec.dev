@@ -28,9 +28,9 @@
   }
 
   :root:has(:global(body.dark)) {
-    --background: #0b030f;
-    --portrait-background: #07020a;
-    --primary: #552f68;
+    --background: #1b0817;
+    --portrait-background: #11030e;
+    --primary: #58284c;
     --text: #fdbeff;
   }
 
