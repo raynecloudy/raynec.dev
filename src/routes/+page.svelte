@@ -191,6 +191,7 @@
   :has(iframe) {
     width: inherit;
     height: inherit;
+    overflow: hidden;
   }
 
   @media (max-width: 70rem) {
