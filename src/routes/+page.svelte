@@ -231,7 +231,7 @@
   <content>
     {#if page.url.hash === ""}
     <container>
-      <div in:fly={{ y: "1rem" }}>
+      <div in:fly={{ y: "1rem", opacity: 1 }}>
         <h1>about</h1>
         <p>he/she</p>
         <p>hii!! my names rayne!!</p>
@@ -241,7 +241,7 @@
     </container>
     {:else if page.url.hash === "#donators"}
     <container>
-      <div in:fly={{ y: "1rem" }}>
+      <div in:fly={{ y: "1rem", opacity: 1 }}>
         <h1>patreons</h1>
         <p>thank you to all the people who've donated to me!!!! it makes my day to know people enjoy what i make &lt;3</p>
         <ul id="donator-list">
@@ -252,7 +252,7 @@
     </container>
     {:else}
     <container>
-      <div in:fly={{ y: "1rem" }}>
+      <div in:fly={{ y: "1rem", opacity: 1 }}>
         <h1>404</h1>
         <p>this page could not be found</p>
       </div>
