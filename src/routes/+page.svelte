@@ -187,6 +187,12 @@
     }
   }
 
+  iframe,
+  :has(iframe) {
+    width: inherit;
+    height: inherit;
+  }
+
   @media (max-width: 70rem) {
     :global(body) {
       display: block;
@@ -276,6 +282,7 @@
       <option value="" selected>about</option>
       <option value="#donators">donators</option>
       <option value="#friends">friends</option>
+      <option value="#guestbook">guestbook</option>
       <option value="#socials">socials</option>
       <option disabled>----- extras -----</option>
       <option value="#puns">rayne and eliza's pun battle</option>
@@ -314,6 +321,12 @@
           <li><a href="https://steve0greatness.nekoweb.org">steve0greatness</a></li>
           <li><a href="https://tally.gay">tally</a></li>
         </ul>
+      </div>
+    </container>
+    {:else if page.url.hash === "#guestbook"}
+    <container>
+      <div in:fly={{ y: "1rem", opacity: 1 }}>
+        <iframe src="https://raynecloudy.atabook.org/" frameborder="0" title="guestbook"></iframe>
       </div>
     </container>
     {:else if page.url.hash === "#socials"}
