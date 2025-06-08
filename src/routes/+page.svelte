@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from "$app/state";
   import { onMount } from "svelte";
-  import { fade } from "svelte/transition";
+  import { fade, fly } from "svelte/transition";
 
   // @ts-ignore
   let picture: HTMLDivElement = $state();
@@ -111,10 +111,18 @@
     background-color: #ffc5f5;
   }
 
-  main content {
+  main > content {
     width: 35rem;
-    max-height: 30rem;
-    overflow: scroll;
+    height: 30rem;
+    overflow-x: visible;
+    overflow-y: auto;
+    position: relative;
+  }
+
+  main > content > container {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   select {
@@ -189,8 +197,8 @@
       background-position: 50% 0 !important;
     }
 
-    main content {
-      max-height: unset;
+    main > content {
+      height: unset;
     }
   }
 </style>
@@ -209,10 +217,10 @@
     </div>
     <h2>rayne cloudy</h2>
     <div id="social-bar">
-      <a href="https://github.com/raynecloudy"><img src="/GitHub_Invertocat_Dark.svg" alt="github"></a>
-      <a href="https://bsky.app/profile/raynec.dev"><img src="/bsky.svg" alt="bluesky"></a>
-      <a href="https://discord.gg/mD6metDHNE"><img src="/Discord-Symbol-Black.svg" alt="discord"></a>
-      <a href="https://patreon.com/raynecloudy" class={page.url.hash === "#donators" ? "light-up" : ""}><img src="/PATREON_SYMBOL_1_BLACK_RGB.svg" alt="patreon"></a>
+      <a href="https://github.com/raynecloudy" in:fly={{ delay: 200, y: "1rem" }}><img src="/GitHub_Invertocat_Dark.svg" alt="github"></a>
+      <a href="https://bsky.app/profile/raynec.dev" in:fly={{ delay: 400, y: "1rem" }}><img src="/bsky.svg" alt="bluesky"></a>
+      <a href="https://discord.gg/mD6metDHNE" in:fly={{ delay: 600, y: "1rem" }}><img src="/Discord-Symbol-Black.svg" alt="discord"></a>
+      <a href="https://patreon.com/raynecloudy" in:fly={{ delay: 800, y: "1rem" }} class={page.url.hash === "#donators" ? "light-up" : ""}><img src="/PATREON_SYMBOL_1_BLACK_RGB.svg" alt="patreon"></a>
     </div>
     <select bind:value={page.url.hash} onchange={(event) => location.hash = event.currentTarget.value}>
       <option value="" selected>about</option>
@@ -222,21 +230,33 @@
   </div>
   <content>
     {#if page.url.hash === ""}
-    <h1>about</h1>
-    <p>he/she</p>
-    <p>hii!! my names rayne!!</p>
-    <p>i'm a teenage computer scientist on the internet. i've been programming for eight years and have had an interest in web development for five years. i really like music, mexican food, and typescript.</p>
-    <p>i started programming when i was seven years old. i've come a long way since then!! the first programming language i learned was python, and i'm now fluent in four more: javascript, typescript, rust, and C++!</p>
+    <container>
+      <div in:fly={{ y: "1rem" }}>
+        <h1>about</h1>
+        <p>he/she</p>
+        <p>hii!! my names rayne!!</p>
+        <p>i'm a teenage computer scientist on the internet. i've been programming for eight years and have had an interest in web development for five years. i really like music, mexican food, and typescript.</p>
+        <p>i started programming when i was seven years old. i've come a long way since then!! the first programming language i learned was python, and i'm now fluent in four more: javascript, typescript, rust, and C++!</p>
+      </div>
+    </container>
     {:else if page.url.hash === "#donators"}
-    <h1>patreons</h1>
-    <p>thank you to all the people who've donated to me!!!! it makes my day to know people enjoy what i make &lt;3</p>
-    <ul id="donator-list">
-      <li class="rainbow-donator"><a href="https://dumorando.com">dumorando</a></li>
-      <li><a href="https://samv.me">shock59</a></li>
-    </ul>
+    <container>
+      <div in:fly={{ y: "1rem" }}>
+        <h1>patreons</h1>
+        <p>thank you to all the people who've donated to me!!!! it makes my day to know people enjoy what i make &lt;3</p>
+        <ul id="donator-list">
+          <li class="rainbow-donator"><a href="https://dumorando.com">dumorando</a></li>
+          <li><a href="https://samv.me">shock59</a></li>
+        </ul>
+      </div>
+    </container>
     {:else}
-    <h1>404</h1>
-    <p>this page could not be found</p>
+    <container>
+      <div in:fly={{ y: "1rem" }}>
+        <h1>404</h1>
+        <p>this page could not be found</p>
+      </div>
+    </container>
     {/if}
   </content>
 </main>
