@@ -6,7 +6,6 @@
   import About from "./About.svelte";
   import Donators from "./Donators.svelte";
   import Friends from "./Friends.svelte";
-  import Guestbook from "./Guestbook.svelte";
   import NotFound from "./NotFound.svelte";
   import Puns from "./Puns.svelte";
   import Socials from "./Socials.svelte";
@@ -163,6 +162,13 @@
     border-radius: 1rem;
     cursor: pointer;
   }
+  
+  iframe,
+  :has(iframe) {
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+  }
 
   @media (max-width: 70rem) {
     :global(body) {
@@ -281,7 +287,7 @@
     {:else if page.url.hash === "#guestbook"}
     <container>
       <div in:fly={{ y: "1rem", opacity: 1 }}>
-        <Guestbook />
+        <iframe src="https://raynecloudy.atabook.org/" frameborder="0" title="guestbook"></iframe>
       </div>
     </container>
     {:else if page.url.hash === "#socials"}
