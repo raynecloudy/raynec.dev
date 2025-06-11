@@ -260,10 +260,10 @@
     </div>
     <h2>rayne cloudy</h2>
     <div id="social-bar">
-      <a href="https://github.com/raynecloudy" in:fly={{ delay: 200, y: "1rem" }}><img src="/GitHub_Invertocat_{lightsOn ? "Dark" : "Light"}.svg" alt="github"></a>
-      <a href="https://bsky.app/profile/raynec.dev" in:fly={{ delay: 400, y: "1rem" }}><img src="/bsky-{lightsOn ? "black" : "white"}.svg" alt="bluesky"></a>
-      <a href="https://discord.gg/mD6metDHNE" in:fly={{ delay: 600, y: "1rem" }} class={page.url.hash === "#contact" ? "light-up" : ""}><img src="/Discord-Symbol-{lightsOn ? "Black" : "White"}.svg" alt="discord"></a>
-      <a href="https://patreon.com/raynecloudy" in:fly={{ delay: 800, y: "1rem" }} class={page.url.hash === "#donators" ? "light-up" : ""}><img src="/PATREON_SYMBOL_1_{lightsOn ? "BLACK" : "WHITE"}_RGB.svg" alt="patreon"></a>
+      <a href="https://github.com/raynecloudy" in:fly={{ delay: 200, y: "1rem" }} title="github"><img src="/GitHub_Invertocat_{lightsOn ? "Dark" : "Light"}.svg" alt="github"></a>
+      <a href="https://bsky.app/profile/raynec.dev" in:fly={{ delay: 400, y: "1rem" }} title="bluesky"><img src="/bsky-{lightsOn ? "black" : "white"}.svg" alt="bluesky"></a>
+      <a href="https://discord.gg/mD6metDHNE" in:fly={{ delay: 600, y: "1rem" }} title="discord server" class={page.url.hash === "#contact" ? "light-up" : ""}><img src="/Discord-Symbol-{lightsOn ? "Black" : "White"}.svg" alt="discord"></a>
+      <a href="https://patreon.com/raynecloudy" in:fly={{ delay: 800, y: "1rem" }} title="patreon" class={page.url.hash === "#donators" ? "light-up" : ""}><img src="/PATREON_SYMBOL_1_{lightsOn ? "BLACK" : "WHITE"}_RGB.svg" alt="patreon"></a>
     </div>
     <select bind:value={page.url.hash} onchange={(event) => location.hash = event.currentTarget.value}>
       <option value="" selected>about</option>
