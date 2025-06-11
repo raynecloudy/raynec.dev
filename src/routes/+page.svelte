@@ -31,6 +31,7 @@
 
   :root {
     --background: linear-gradient(-15deg, #fbf0ff, #fff0fb);
+    --link: #6817ff;
     --portrait-background: #fcf8ff;
     --primary: #ffc5f5;
     --text: #581ec2;
@@ -38,6 +39,7 @@
 
   :root:has(:global(body.dark)) {
     --background: #1b0817;
+    --link: #a371ff;
     --portrait-background: #11030e;
     --primary: #58284c;
     --text: #fdbeff;
@@ -162,6 +164,10 @@
     outline: 0.15rem solid var(--primary);
     border-radius: 1rem;
     cursor: pointer;
+  }
+
+  :global(a) {
+    color: var(--link);
   }
   
   iframe,
