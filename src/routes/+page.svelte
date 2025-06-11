@@ -56,7 +56,7 @@
     font-family: "Mukta Mahee";
   }
 
-  ::selection {
+  :global(::selection) {
     text-shadow: none;
     background-color: var(--primary);
     color: var(--text);
