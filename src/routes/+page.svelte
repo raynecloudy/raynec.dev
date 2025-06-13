@@ -246,6 +246,9 @@
         case "#friends":
           return "my buddies!";
 
+        case "#guestbook":
+          return "sign my guestbook!";
+
         case "#socials":
           return "my online presence";
 
