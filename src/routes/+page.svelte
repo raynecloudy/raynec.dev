@@ -265,6 +265,15 @@
         case "#socials":
           return "my online presence";
 
+        case "#char-rayne":
+          return "character: rayne";
+
+        case "#char-hayley":
+          return "character: hayley";
+
+        case "#char-hayden":
+          return "character: hayden";
+
         case "#puns":
           return "rayne and eliza's epic pun battle!";
       
