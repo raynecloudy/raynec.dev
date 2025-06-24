@@ -4,6 +4,7 @@
   import { fade, fly } from "svelte/transition";
 
   import About from "./About.svelte";
+  import CharRayne from "./CharRayne.svelte";
   import Contact from "./Contact.svelte";
   import Donators from "./Donators.svelte";
   import Friends from "./Friends.svelte";
@@ -151,6 +152,18 @@
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    word-wrap: break-word;
+  }
+
+  :global(container div img) {
+    max-width: 100%;
+    max-height: 26rem;
+  }
+
+  :global(.side) {
+    display: flex;
+    gap: 1rem;
   }
 
   select {
@@ -272,6 +285,10 @@
       <option value="#friends">friends</option>
       <option value="#guestbook">guestbook</option>
       <option value="#socials">socials</option>
+      <option disabled>--- characters ---</option>
+      <option value="#char-rayne">rayne</option>
+      <option value="#char-hayley">hayley</option>
+      <option value="#char-hayden">hayden</option>
       <option disabled>----- extras -----</option>
       <option value="#puns">rayne and eliza's pun battle</option>
     </select>
@@ -311,6 +328,12 @@
     <container>
       <div in:fly={{ y: "1rem", opacity: 1 }}>
         <Socials />
+      </div>
+    </container>
+    {:else if page.url.hash === "#char-rayne"}
+    <container>
+      <div in:fly={{ y: "1rem", opacity: 1 }}>
+        <CharRayne />
       </div>
     </container>
     {:else if page.url.hash === "#puns"}
