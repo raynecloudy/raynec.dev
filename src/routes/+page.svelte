@@ -36,6 +36,7 @@
     --portrait-background: #fcf8ff;
     --primary: #ffc5f5;
     --text: #581ec2;
+    color-scheme: light;
   }
 
   :root:has(:global(body.dark)) {
@@ -44,6 +45,7 @@
     --portrait-background: #11030e;
     --primary: #58284c;
     --text: #fdbeff;
+    color-scheme: dark;
   }
 
   :global(body) {
@@ -66,7 +68,8 @@
     color: var(--text);
   }
 
-  :focus-visible {
+  :focus-visible,
+  :global(:focus-visible)  {
     outline: 0.15rem solid var(--text);
   }
   
@@ -179,6 +182,10 @@
     cursor: pointer;
   }
 
+  option {
+    background-color: inherit;
+  }
+
   :global(a) {
     color: var(--link);
   }
@@ -251,6 +258,9 @@
 
         case "#friends":
           return "my buddies!";
+
+        case "#guestbook":
+          return "sign my guestbook!";
 
         case "#socials":
           return "my online presence";
