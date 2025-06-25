@@ -4,6 +4,8 @@
   import { fade, fly } from "svelte/transition";
 
   import About from "./About.svelte";
+  import CharHayden from "./CharHayden.svelte";
+  import CharHayley from "./CharHayley.svelte";
   import CharRayne from "./CharRayne.svelte";
   import Contact from "./Contact.svelte";
   import Donators from "./Donators.svelte";
@@ -353,6 +355,18 @@
     <container>
       <div in:fly={{ y: "1rem", opacity: 1 }}>
         <CharRayne />
+      </div>
+    </container>
+    {:else if page.url.hash === "#char-hayley"}
+    <container>
+      <div in:fly={{ y: "1rem", opacity: 1 }}>
+        <CharHayley />
+      </div>
+    </container>
+    {:else if page.url.hash === "#char-hayden"}
+    <container>
+      <div in:fly={{ y: "1rem", opacity: 1 }}>
+        <CharHayden />
       </div>
     </container>
     {:else if page.url.hash === "#puns"}

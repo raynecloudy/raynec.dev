@@ -3,7 +3,7 @@
     <h1><span title="first">rayne</span> <span title="middle">nebulae</span> <span title="last">cloudy</span></h1>
     <p>rayne is my persona. she's 15 and uses she/her, he/him, and they/them pronouns. she's also transgender.</p>
     <h2>lore</h2>
-    <p>rayne is the encompassing entity of <a href="/c/hayden.html">hayden</a> and <a href="/c/hayley.html">hayley</a>. she depicts traits of both of them, both psychologically (f.e. hayden's ability to chill, but also hayley's <span title="i love this word">whimsy</span>) and physically (f.e. hayden's hairstyle, hayley's hairpin).</p>
+    <p>rayne is the encompassing entity of <a href="#char-hayden">hayden</a> and <a href="#char-hayley">hayley</a>. she depicts traits of both of them, both psychologically (f.e. hayden's ability to chill, but also hayley's <span title="i love this word">whimsy</span>) and physically (f.e. hayden's hairstyle, hayley's hairpin).</p>
   </div>
   <img src="https://stuff.raynec.dev/art/2025/rayne%20remastered.png" title="this took me 4 HOURS AND 32 MINUTES TO DRAW" alt="rayne">
 </div>
@@ -12,6 +12,7 @@
 <h3>physical</h3>
 <p>she's biologically male—she does not have breasts. she never did. TwT</p>
 <p>she has soft shoulders.</p>
+<p>she's 5' 7".</p>
 <p>her hair is naturally a light coffee brown color. she doesn't have hair anywhere but on the top of her head!</p>
 <p>her eyes are light pink.</p>
 <p>she is white.</p>
@@ -32,5 +33,5 @@
 <p>all these images use an outdated version of rayne—for the most accurate reference, please see the picture at the top!</p>
 <img src="https://stuff.raynec.dev/art/2025/rayneparty.png" alt="rayne">
 <img src="https://stuff.raynec.dev/art/2025/rayne.png" alt="rayne">
-<img src="https://stuff.raynec.dev/art/2025/whoami.png" alt="rayne, hayley, and hayden" class="restricted">
+<img src="https://stuff.raynec.dev/art/2025/whoami.png" alt="rayne, hayley, and hayden">
 <img src="https://stuff.raynec.dev/art/2025/april%20showers.png" alt="rayne">
