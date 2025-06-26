@@ -24,7 +24,7 @@
   <li>pink spherical earrings</li>
   <li>lime green sports bra</li>
   <li>oversized beige tee with a star design</li>
-  <li>two bracelets- one purple, one rainbow</li>
+  <li>two bracelets: one purple, one rainbow</li>
   <li>red plaid skirt</li>
   <li>pink thigh-high socks</li>
   <li>grey sandals</li>
