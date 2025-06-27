@@ -7,7 +7,8 @@
   </div>
   <img src="https://stuff.raynec.dev/art/2025/rayne%20remastered.png" title="this took me 4 HOURS AND 32 MINUTES TO DRAW" alt="rayne">
 </div>
-<p>note that she does NOT have multiple personality disorder—she is the result of hayden and hayley being merged into one person and sense of self.</p>
+<p>because hayley was a supernatural entity, rayne also possesses supernatural abilities. she can levitate a foot off the ground, and she emits a faint pink glow.</p>
+<p>note that rayne does NOT have multiple personality disorder—she is the result of hayden and hayley being merged into one person and sense of self.</p>
 <h2>appearance</h2>
 <h3>physical</h3>
 <p>she's biologically male—she does not have breasts. she never did. TwT</p>
