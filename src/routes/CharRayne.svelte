@@ -1,7 +1,7 @@
 <div class="side">
   <div>
     <h1><span title="first">rayne</span> <span title="middle">nebulae</span> <span title="last">cloudy</span></h1>
-    <p>rayne is my persona. she's 15 and uses she/her, he/him, and they/them pronouns. she's also transgender.</p>
+    <p>rayne is my persona. she's 15 and uses she/her, he/him, and they/them pronouns. she's also transgender. while she is not radically feminine, she is still leaning feminine.</p>
     <h2>lore</h2>
     <p>rayne is the encompassing entity of <a href="#char-hayden">hayden</a> and <a href="#char-hayley">hayley</a>. she depicts traits of both of them, both psychologically (f.e. hayden's ability to chill, but also hayley's <span title="i love this word">whimsy</span>) and physically (f.e. hayden's hairstyle, hayley's hairpin).</p>
   </div>
