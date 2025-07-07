@@ -1,0 +1,31 @@
+<rss version="2.0">
+    <channel>
+        <title>rayne's feed</title>
+        <description>my feed :3</description>
+        <link>https://raynecloudy.nekoweb.org/</link>
+        <item>
+            <title>selection box!!</title>
+            <description>i've added a new page to my site: selection box!! press and drag your mouse and watch the cool blue box appear</description>
+            <link>https://raynecloudy.nekoweb.org/select/</link>
+            <HTMLParserLink>https://raynecloudy.nekoweb.org/select/</HTMLParserLink>
+            <guid>post_3</guid>
+            <pubDate>Tue 04 Feb 2025, 16:18:00 PST</pubDate>
+        </item>
+        <item>
+            <title>i have a patreon now</title>
+            <description>i have a patreon now which means you can pay me so like woaa!! :3</description>
+            <link>https://patreon.com/raynecloudy/</link>
+            <HTMLParserLink>https://patreon.com/raynecloudy/</HTMLParserLink>
+            <guid>post_2</guid>
+            <pubDate>Fri 31 Jan 2025, 9:00:00 PST</pubDate>
+        </item>
+        <item>
+            <title>how does RSS work</title>
+            <description>this is a test. thank you for being a part of this test. as a reward, you get a treat. click this post to see a secret gay feature that almost nobody knows about. shhhhhh</description>
+            <link>https://raynecloudy.nekoweb.org/#silly</link>
+            <HTMLParserLink>https://raynecloudy.nekoweb.org/#silly</HTMLParserLink>
+            <guid>post_1</guid>
+            <pubDate>Fri 24 Jan 2025, 16:54:00 PST</pubDate>
+        </item>
+    </channel>
+</rss>

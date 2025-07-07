@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>rayne c!</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <button id="silly" aria-hidden="true">silly</button>
+    <div>
+      <canvas id="draw" aria-hidden="true"></canvas>
+    </div>
+    <content>
+      <div class="tab_skip_control panel">
+        <a href="#home">skip to content</a>
+      </div>
+      <img src="/media/catears.png" alt="cat ear" aria-hidden="true">
+      <img src="/media/catears.png" alt="cat ear" aria-hidden="true" style="float: right; transform: rotateY(180deg);">
+      <header class="panel">
+        <img src="/media/lights.png" alt="hanging lights" aria-hidden="true" style="position: absolute; top: 0; left: 0; user-select: none;">
+        <img src="/media/lights2.png" alt="hanging lights" aria-hidden="true" style="position: absolute; top: 0; right: 0; user-select: none;">
+        <h1><img src="https://99gifshop.neocities.org/items/3/wingedorb.gif" alt="orb with wings">rayne's website!<img src="https://99gifshop.neocities.org/items/3/wingedorb.gif" alt="orb with wings"></h1>
+        <span>rayne's own little spot on the web ^w^</span>
+      </header>
+      <main>
+        <table>
+          <tbody>
+            <tr style="display: flex;">
+              <th>
+                <div id="left-panel" class="panel">
+                  <img src="/media/links.gif" alt="links">
+                  <ul>
+                    <li><a href="https://raynecloudy.bsky.social">bluesky <img src="/media/external_link.png" alt="external link"></a></li>
+                    <li>
+                      <span>character sheets</span>
+                      <ul>
+                        <li><a href="/c/hayden">hayden</a></li>
+                        <li><a href="/c/hayley">hayley</a></li>
+                        <li><a href="/c/rayne">rayne</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="/calculators">desmos stuff</a></li>
+                    <li><a href="https://discord.raynec.dev">discord <img src="/media/external_link.png" alt="external link"></a></li>
+                    <li><a href="/donators">donators</a></li>
+                    <li><a href="/feed">feed</a></li>
+                    <li><a href="https://github.com/raynecloudy">github <img src="/media/external_link.png" alt="external link"></a></li>
+                    <li><a href="/guestbook">guestbook <img src="/media/external_link.png" alt="external link"></a></li>
+                    <li><a href="/pong">one-player pong</a></li>
+                    <li><a href="/race">oneko racing</a></li>
+                    <li><a href="https://patreon.com/raynecloudy">patreon <img src="/media/external_link.png" alt="external link"></a></li>
+                  </ul>
+                  <hr>
+                  <table style="margin: 0 auto;">
+                      <tr>
+                          <td>
+                              <a
+                                  href="https://steve0greatness.github.io/webring/sites/breakfast/prev.xhtml"
+                                  id="s0gw-left"
+                              >&lt;--</a>
+                          </td>
+                          <td>
+                              <a
+                                  href="https://steve0greatness.github.io/webring"
+                                  target="_blank"
+                              >
+                                  <img
+                                      src="https://steve0greatness.github.io/webring/logo.webp"
+                                      width="100"
+                                      height="42"
+                                      alt="steve0greatness webring"
+                                  />
+                              </a>
+                          </td>
+                          <td>
+                              <a
+                                  href="https://steve0greatness.github.io/webring/sites/breakfast/next.xhtml"
+                                  id="s0gw-right"
+                              >--&gt;</a>
+                          </td>
+                      </tr>
+                  </table>
+                </div>
+              </th>
+              <th>
+                <div id="right-panel" class="panel">
+                  <div id="home">
+                    <img class="lights" src="/media/lights.png" alt="hanging lights" style="position: absolute; z-index: 5; transform: scaleX(-1); width: 300px; top: 0; right: 0; user-select: none;">
+                    <hr>
+                    <h1>heya!! <img style="height: 1.5rem;" src="https://99gifshop.neocities.org/items/new/smile.gif" alt="smiley face"></h1>
+                    <p>hi!! my name is rayne, and welcome to my silly lil website!!! my pronouns are she/they :3</p>
+                    <p>i'm a teenage computer scientist on the internet. i've been programming for eight whole years now and have spent five of those years in the web development field. i really like art, mexican food, and javascript.</p>
+                    <noscript>
+                      <style>
+                        scriptonly {
+                          display: none;
+                        }
+                      </style>
+                    </noscript>
+                    <scriptonly>
+                      <div class="panel">
+                        <img id="lastfm_image" style="float: right;">
+                        <span id="lastfm_status">last listened to</span>
+                        <h3><a id="lastfm_title">....</a></h3>
+                        <span>by <a id="lastfm_artist">....</a> on <a id="lastfm_album">....</a></span>
+                        <p>data courtesy of <a href="https://last.fm/">last.fm</a> and <a href="https://github.com/biancarosa/lastfm-last-played/">@biancarosa/lastfm-last-played</a></p>
+                      </div>
+                    </scriptonly>
+                    <hr>
+                    <img src="/media/lights3.png" alt="hanging lights" aria-hidden="true" style="position: absolute; z-index: -1; bottom: -187px; left: 0; user-select: none;">
+                  </div>
+                </div>
+                <img src="/media/lights3.png" alt="hanging lights" aria-hidden="true" style="position: absolute; z-index: -1; bottom: -187px; left: 0; user-select: none;">
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </main>
+      <footer>
+        <span>made with &lt;3 by rayne cloudy. this website was last updated on the 6th of july, 2025. ヾ(*´∇`)ﾉ</span>
+      </footer>
+    </content>
+    <script type="module" src="/index.js"></script>
+    <script type="module" src="/listening.js"></script>
+    <script src="/lots-o-nekos.js"></script>
+  </body>
+</html>
