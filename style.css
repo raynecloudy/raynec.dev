@@ -150,7 +150,11 @@ a:hover {
 
 main {
   position: relative;
-  margin: -0.1875rem;
+}
+
+main table {
+  border-collapse: collapse;
+  gap: 20px;
 }
 
 #left-panel {
@@ -424,6 +428,15 @@ div:has(#new-site) {
   display: block;
   width: unset;
   height: unset;
+}
+
+tr:not(#main-row) :where(td, th):not(.s0gcell) {
+  outline: 0.125rem solid var(--main-color);
+  /* padding: 0.1rem 0.3rem; */
+}
+
+#main-row {
+  display: flex;
 }
 
 /* body:has(#EWZ_frame:hover) {
